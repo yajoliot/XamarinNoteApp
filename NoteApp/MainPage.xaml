@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NoteApp"
+             x:Class="NoteApp.MainPage"
+             Title="NoteTaker">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="..."
+                     Activated="Clicked_3dots"/>
+        <ToolbarItem Text="+"
+                     Activated="Clicked_Add"/>
+        <ToolbarItem Text="Delete"
+                     Activated="Clicked_Delete"/>
+
+    </ContentPage.ToolbarItems>
+
+    
+    
+    <ListView x:Name="noteList">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell >
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                            <Label Text= "{Binding Importance}" Font="Bold" FontSize="Large" TextColor="Black"/>
+                            <Label Text= "{Binding Name}" Font="Bold" FontSize="Large" TextColor="DeepSkyBlue"/>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+   
+
+
+
+
+</ContentPage>

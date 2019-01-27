@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoteApp.NewNote">
+    <StackLayout>
+        <Entry x:Name="nameEntry"
+               Placeholder="Write Note"/>
+        <Picker x:Name="importanceEntry" Title="Importance">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:Int32}">
+                    <x:Int32>1</x:Int32>
+                    <x:Int32>2</x:Int32>
+                    <x:Int32>3</x:Int32>
+                    <x:Int32>4</x:Int32>
+                    <x:Int32>5</x:Int32>
+                    <x:Int32>6</x:Int32>
+                    <x:Int32>7</x:Int32>
+                    <x:Int32>8</x:Int32>
+                    <x:Int32>9</x:Int32>
+                    <x:Int32>10</x:Int32>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button Text= "Save"
+                Clicked="Clicked_Save"/>
+        <StackLayout Orientation="Horizontal" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center">
+            <Image Source="bellicon.PNG"/>
+            
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>
